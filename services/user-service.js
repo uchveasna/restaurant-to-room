@@ -17,9 +17,7 @@ exports.addUser = function(user, next) {
 };
 
 exports.findUser = function(email, next) {
-	User.findOne({
-		email: email.toLowerCase()
-	}, function(err, user) {
+	User.findOne({email: email.toLowerCase()}, function(err, user) {
 		next(err, user);
 	});
 };
